@@ -15,8 +15,11 @@ There are three main keys for this project:
    
 3. Flask Web App:
     Quick web setup to have some visualizations.
+   
+----
 
 How to run the project files from the IDE Workspace:
+
 
 Create a processed sqlite database:
 python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
