@@ -34,6 +34,7 @@ def clean_data(df):
     df = df.drop('categories', axis=1)
     df = pd.concat([df , categories], axis=1)
     df = df.drop_duplicates()
+    df = df[df['related'] != 2]
 
     return df
 
@@ -44,7 +45,7 @@ def save_data(df, database_filepath):
     outputs: none (saving)
     '''
     engine = create_engine('sqlite:///' + database_filepath)
-    df.to_sql('Data_Table', engine, index=False)
+    df.to_sql('Data_Table', engine, index=False, if_exists='replace')
 
 def main():
     if len(sys.argv) == 4:
