@@ -70,7 +70,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     Output: Printing the classification report and the accuracy
     '''
     y_pred = model.predict(X_test)
-    #print(classification_report(y_pred, Y_test.values, target_names=category_names))
+    print(classification_report(y_pred, Y_test.values, target_names=category_names))
     print('Accuracy score: ' + str((y_pred == Y_test).mean().mean()))
 
 def save_model(model, model_filepath):
