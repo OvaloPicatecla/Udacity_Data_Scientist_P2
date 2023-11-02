@@ -22,12 +22,15 @@ How to run the project files from the IDE Workspace:
 
 
 Create a processed sqlite database:
+
 python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
 
 To train and save a pkl model:
+
 python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
 
 Deploy the application locally:
+
 python run.py
 
 ----
