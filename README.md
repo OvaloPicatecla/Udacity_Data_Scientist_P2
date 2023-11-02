@@ -15,3 +15,38 @@ There are three main keys for this project:
    
 3. Flask Web App:
     Quick web setup to have some visualizations.
+
+How to run the project files from the IDE Workspace:
+
+Create a processed sqlite database:
+python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db
+
+To train and save a pkl model:
+python models/train_classifier.py data/DisasterResponse.db models/classifier.pkl
+
+Deploy the application locally:
+python run.py
+
+----
+
+Files in the Repository:
+
+    - app
+        -templates
+            -go.html
+            -master.html
+        -run.py
+    - data
+        - DisasterResponse.db
+        - YourDatabaseName.db
+        - disaster_categories.csv
+        - disaster_messages.csv
+        - process_data.py
+        
+    - models
+        - train_classifier.py
+
+    - Clean_dataset.db
+    - ETL Pirpeline Preparation.ipynb
+    - ML PipeLine Preparation.ipynb
+    -README.md
